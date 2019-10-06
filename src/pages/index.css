@@ -1,0 +1,70 @@
+@import url("<https://fonts.googleapis.com/css?family=Open+Sans:300,400,600>");
+html {
+  font-family: "Open Sans";
+}
+header {
+  /* We use !important here to override
+  the inline styles just for this example.
+  in production code, avoid using it where
+  possible*/
+  background-color: cadetblue !important;
+}
+header div {
+  text-align: center;
+}
+header div h1 {
+  font-weight: 600;
+}
+.home {
+  text-align: center;
+}
+.home img {
+  margin: auto;
+}
+.blogpost {
+  font-size: 18px;
+  width: 35em;
+}
+h1 {
+  font-weight: 400;
+  margin-top: 48px;
+  font-family: "Open Sans";
+}
+img {
+  margin-bottom: 8px;
+}
+.tags {
+  margin-bottom: 24px;
+}
+.tags span.tag {
+  font-weight: bold;
+  margin-right: 8px;
+  background: cadetblue;
+  padding: 2px 12px;
+  border-radius: 4px;
+  color: white;
+  font-size: 12px;
+}
+.blogpost p.body-text {
+  margin-bottom: 32px;
+}
+p {
+  line-height: 1.8;
+  color: #929191;
+  font-weight: 300;
+}
+.blogpost a {
+  display: block;
+  margin-bottom: 8px;
+}
+.blogposts a {
+  display: block;
+  margin-bottom: 8px;
+}
+footer {
+  margin-top: 120px;
+}
+.mgBtm__24 {
+  display: inline-block;
+  margin-bottom: 24px;
+}
