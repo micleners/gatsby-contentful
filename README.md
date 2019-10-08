@@ -17,6 +17,7 @@ This is auto-generated from Gatsby when you create your site.
 ## Startup Server
 
 `cd gatsby-contentful`
+
 `gatsby develop`
 
 Investigate the starter site. We're going to edit the main page and page-2 before creating contentful.
@@ -55,7 +56,7 @@ const IndexPage = () => (
 export default IndexPage
 ```
 
-Create a file in the `pages` directory names `index.css` - we'll come back to use this later.'
+Create a file in the `pages` directory named `index.css` - we'll come back to use this later.
 
 Change the name of `page-2.js` to `blogposts.js`. After loading out blogs from Contentful we'll come back to list all our posts here.
 
