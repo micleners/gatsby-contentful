@@ -71,7 +71,7 @@ This tutorial is focused on loading data from our CMS through Gatsby and not des
 Change the name of `page-2.js` to `blogposts.js`. This is where we'll list all of the blogs from Contetnful after we hook it up with a Gatsby plugin.
 
 ## Update Site Meta Data
-Navigate to the file `gatsby-config.js` and update `siteMetadata` with your own information:
+Navigate to the file `gatsby-config.js` and update `siteMetadata` with your own information. The title is what appears at the top of the browser window/tab. The description and author can be queried and used as data in components.  All three values are used in the baked in SEO component. 
 
 ```js
 siteMetadata: {
