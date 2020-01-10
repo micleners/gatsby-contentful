@@ -134,17 +134,17 @@ You'll notice a button to the side to "(+) Add Field". Fields act as data entrie
 
 - Create a final **Text** field for **Slug**. Instead of clicking create, click **Create and Configure** and do the following: - Go to **Appearance Tab** and select **Slug**. - Go to **Validations** and select **Required** and **Unique**. The slug field is the final part of the URL path that will lead to your post, so we want it to be unique (no two posts can have the same URL)
 
-![click create and configure](https://res.cloudinary.com/meta-lark-design/image/upload/c_scale,w_600/v1570398343/mike-portfolio/gatsby-contentful-netlify/11-slug-field.png)
+![click create and configure](https://res.cloudinary.com/meta-lark-design/image/upload/c_scale,w_0.5/v1570398343/mike-portfolio/gatsby-contentful-netlify/11-slug-field.png)
 
-![appearance as slug](https://res.cloudinary.com/meta-lark-design/image/upload/c_scale,w_600/v1570398343/mike-portfolio/gatsby-contentful-netlify/12-slug-appearance.png)
+![appearance as slug](https://res.cloudinary.com/meta-lark-design/image/upload/c_scale,w_0.5/v1570398343/mike-portfolio/gatsby-contentful-netlify/12-slug-appearance.png)
 
-![validations as unique](https://res.cloudinary.com/meta-lark-design/image/upload/c_scale,w_600/v1570398343/mike-portfolio/gatsby-contentful-netlify/13-slug-validations.png)
+![validations as unique](https://res.cloudinary.com/meta-lark-design/image/upload/c_scale,w_0.5/v1570398343/mike-portfolio/gatsby-contentful-netlify/13-slug-validations.png)
 
 ## Final Model Format
 
 In the end, you should have the following fields on your blog:
 
-![final blog fields](https://res.cloudinary.com/meta-lark-design/image/upload/c_scale,w_400/v1570398343/mike-portfolio/gatsby-contentful-netlify/14-finished-blogpost-content-model.png)
+![final blog fields](https://res.cloudinary.com/meta-lark-design/image/upload/c_scale,w_0.5/v1570398343/mike-portfolio/gatsby-contentful-netlify/14-finished-blogpost-content-model.png)
 
 Save changes and then let's start creating content.
 
@@ -180,11 +180,11 @@ Now let's go find the variables to put in the placeholders.
 
 For Space ID, go to **Settings** in the top navigation, then down to **General Settings**. Place your Space ID in the environment file.
 
-![General settings for Space ID](https://res.cloudinary.com/meta-lark-design/image/upload/c_scale,w_300/v1570398343/mike-portfolio/gatsby-contentful-netlify/15-general-settings.png)
+![General settings for Space ID](https://res.cloudinary.com/meta-lark-design/image/upload/c_scale,w_0.5/v1570398343/mike-portfolio/gatsby-contentful-netlify/15-general-settings.png)
 
 You will need to create an API key by going to the **Settings** top navigation and go down to **API keys**. Create a new API Key. Label it with your blog name and copy your **Content Delivery API** token to your **.env.development** file.
 
-![API settings for API Key](https://res.cloudinary.com/meta-lark-design/image/upload/c_scale,w_300/v1570398343/mike-portfolio/gatsby-contentful-netlify/16-settings-api-keys.png)
+![API settings for API Key](https://res.cloudinary.com/meta-lark-design/image/upload/c_scale,w_0.5/v1570398343/mike-portfolio/gatsby-contentful-netlify/16-settings-api-keys.png)
 
 ## Install Contentful Plugin To Gatsby
 
