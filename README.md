@@ -1,27 +1,22 @@
 Note: This was created with the help of this [ITNEXT Blog](https://itnext.io/content-management-with-gatsby-netlify-and-contentful-70f03de41602)
 
 # Setup Gatsby Site
-
 The site we will be developing is a blog. This fits the tech stack used, because often use a Content Management System (CMS) like Contentful to pull data from. We also want to have our site dynamically builed when we create new posts. We'll do all this in this tutorial!
 
 ## Install Gatsby CLI
-
 Gatsby comes with a slick CLI that helps you generate new applications. Before creating your first project, install gatsby-cli globally.
 
 `npm i -g gatsby-cli`
 
 ## Create new site
-
 Gatsby is a static site generator that it built on top of react. At build time, Gatsby reaches out to all your data sources (markdown files, json, yaml, WordPress, Contentful, etc) and puts it in the graphQL data layer. Creating a new project will set you up with the basic stack you'll need to get started. 
 
 `gatsby new gatsby-contentful`
 
 # Initial Commit:
-
 This is auto-generated from Gatsby when you create your site.
 
 ## Startup Server
-
 Navigate into the folder you created your site in.
 
 `cd gatsby-contentful`
@@ -33,7 +28,6 @@ Gatsby has it's own commands. If you're used to `npm run start`, don't fret, the
 Investigate the starter site! There are lots of starters available on the Gatsby website. For now we're going to start with the basic starter by editing the main page (index.js) and page-2 before creating contentful.
 
 ## Change index.js
-
 We're not going to change a whole lot here. The most important part is that the `<Link>` at the bottom of the page gets changed from `page-2` to `blogposts`. Update the file `pages/index.js` with the following.
 
 ```javascript
@@ -95,10 +89,11 @@ Update homepage, rename page-2 to blogposts, and update siteMetadata
 ## Create Account
 Head to [Contentful](https://www.contentful.com/) and create an account. You can do this with a 3rd party login (google, github, etc.) or with a username and password.
 
+You'll be provided with options to explore or create a 3-step site. While Contentful has an awesome tutorial, choose to explore to continue following this
+
 ![explore, don't create 3 step site](https://res.cloudinary.com/meta-lark-design/image/upload/c_scale,w_800/v1570398343/mike-portfolio/gatsby-contentful-netlify/1-explore.png)
 
 ## Create Space
-
 You will probably be created a `contentful-starter` space. Go ahead and click that left hand header to open up a sidenav that will allow you to create a new space:
 
 ![open contentful sidenav](https://res.cloudinary.com/meta-lark-design/image/upload/c_scale,w_300/v1570398343/mike-portfolio/gatsby-contentful-netlify/2-sidenav.png)
