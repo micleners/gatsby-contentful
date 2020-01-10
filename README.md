@@ -91,7 +91,7 @@ Head to [Contentful](https://www.contentful.com/) and create an account. You can
 
 You'll be provided with options to explore or create a 3-step site. While Contentful has an awesome tutorial, choose to explore to continue following this
 
-![explore, don't create 3 step site](https://res.cloudinary.com/meta-lark-design/image/upload/c_scale,w_800/v1570398343/mike-portfolio/gatsby-contentful-netlify/1-explore.png)
+![explore, don't create 3 step site](https://res.cloudinary.com/meta-lark-design/image/upload/c_scale,w_0.5/v1570398343/mike-portfolio/gatsby-contentful-netlify/1-explore.png)
 
 ## Create Space
 You will probably be created a `contentful-starter` space. Go ahead and click that left hand header to open up a sidenav that will allow you to create a new space:
