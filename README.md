@@ -96,41 +96,41 @@ You'll be provided with options to explore or create a 3-step site. While Conten
 ## Create Space
 You will probably be created a `contentful-starter` space. Go ahead and click that left hand header to open up a sidenav that will allow you to create a new space:
 
-![open contentful sidenav](https://res.cloudinary.com/meta-lark-design/image/upload/c_scale,w_300/v1570398343/mike-portfolio/gatsby-contentful-netlify/2-sidenav.png)
+![open contentful sidenav](https://res.cloudinary.com/meta-lark-design/image/upload/c_scale,w_0.5/v1570398340/mike-portfolio/gatsby-contentful-netlify/2-sidenav.png)
 
-![create new space](https://res.cloudinary.com/meta-lark-design/image/upload/c_scale,w_500/v1570398343/mike-portfolio/gatsby-contentful-netlify/3-new-space.png)
+![create new space](https://res.cloudinary.com/meta-lark-design/image/upload/c_scale,w_0.5/v1570398343/mike-portfolio/gatsby-contentful-netlify/3-new-space.png)
 
 Notice the free tier limitations.
 
-![create new space](https://res.cloudinary.com/meta-lark-design/image/upload/c_scale,w_800/v1570398343/mike-portfolio/gatsby-contentful-netlify/4_-free-tier.png)
+![create new space](https://res.cloudinary.com/meta-lark-design/image/upload/c_scale,w_0.5/v1570398343/mike-portfolio/gatsby-contentful-netlify/4_-free-tier.png)
 
-![create gatsby space](https://res.cloudinary.com/meta-lark-design/image/upload/c_scale,w_500/v1570398340/mike-portfolio/gatsby-contentful-netlify/5-create-gatsby-contful-space.png)
+![create gatsby space](https://res.cloudinary.com/meta-lark-design/image/upload/c_scale,w_0.5/v1570398340/mike-portfolio/gatsby-contentful-netlify/5-create-gatsby-contful-space.png)
 
 ## Create Content Model
 
 Go to `Content model` on the top nav. Then click this "Add Content Type" in the center of the screen. Name the content type `Blog Post`. Leave the identifier alone and create any description if you'd like.
 
-![create content model](https://res.cloudinary.com/meta-lark-design/image/upload/c_scale,w_600/v1570398343/mike-portfolio/gatsby-contentful-netlify/6-create-content-model.png)
+![create content model](https://res.cloudinary.com/meta-lark-design/image/upload/c_scale,w_0.5/v1570398343/mike-portfolio/gatsby-contentful-netlify/6-create-content-model.png)
 
 You'll notice a button to the side to "(+) Add Field". Fields act as data entries on your model and can be of a variety of types.
 
 - Click on **Add Field** start adding fields to your model.
 - Select **Text** for your first field.
 
-![chose text field](https://res.cloudinary.com/meta-lark-design/image/upload/c_scale,w_600/v1570398343/mike-portfolio/gatsby-contentful-netlify/7-field-options.png)
+![chose text field](https://res.cloudinary.com/meta-lark-design/image/upload/c_scale,w_0.5/v1570398343/mike-portfolio/gatsby-contentful-netlify/7-field-options.png)
 
 -Put Title as its name, leave it as a short text and click create.
 
-![create title field](https://res.cloudinary.com/meta-lark-design/image/upload/c_scale,w_600/v1570398343/mike-portfolio/gatsby-contentful-netlify/8-title-text.png)
+![create title field](https://res.cloudinary.com/meta-lark-design/image/upload/c_scale,w_0.5/v1570398343/mike-portfolio/gatsby-contentful-netlify/8-title-text.png)
 
 - Create another field for **Body** and make this one a **Long Text** field.
 
-![create body field](https://res.cloudinary.com/meta-lark-design/image/upload/c_scale,w_600/v1570398343/mike-portfolio/gatsby-contentful-netlify/9-create-body.png)
+![create body field](https://res.cloudinary.com/meta-lark-design/image/upload/c_scale,w_0.5/v1570398343/mike-portfolio/gatsby-contentful-netlify/9-create-body.png)
 
 - Create a **Media** field and label it as **Image**
 - Create another text field and name it tags. Make sure to check the list option on the right.
 
-![create tags field](https://res.cloudinary.com/meta-lark-design/image/upload/c_scale,w_600/v1570398343/mike-portfolio/gatsby-contentful-netlify/10-tags.png)
+![create tags field](https://res.cloudinary.com/meta-lark-design/image/upload/c_scale,w_0.5/v1570398343/mike-portfolio/gatsby-contentful-netlify/10-tags.png)
 
 - Create a final **Text** field for **Slug**. Instead of clicking create, click **Create and Configure** and do the following: - Go to **Appearance Tab** and select **Slug**. - Go to **Validations** and select **Required** and **Unique**. The slug field is the final part of the URL path that will lead to your post, so we want it to be unique (no two posts can have the same URL)
 
