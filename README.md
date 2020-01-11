@@ -1,7 +1,18 @@
-Note: This was created with the help of this [ITNEXT Blog](https://itnext.io/content-management-with-gatsby-netlify-and-contentful-70f03de41602)
+# Gatsby + Contentful + Netlify
+Gatsby is a static site generator built on top of React. A static site has all the data you need when the user requests it, so the site loads blazing fast. Gatsby does this by fetching all the data you hook up to it at build time. It can also still behave like a react app, too, so you get the best of both worlds!
+
+The headless CMS (that is - a content management system without a frontend) that we will be using is Contentful. Gatsby has many plugins to use other CMS platforms like SanityIO, Netlify CMS, or even WordPress API.
+
+Then to get our site on the internet, we will be using Netlify, an all-in-one platform for automating deployment of modern frontend web projects.
+
+To read more about this tech stack, check out the tutorial [introduction presentation](https://gatsby-intro.micleners.com/#/) to accompany this tutorial.
+
+We will be developing a blog in this tutorial. It's perfect for this tech stack, because often we use a Content Management System (CMS) like Contentful to pull data from. We also want to have our site dynamically re-built when we create new posts. We'll do all this in this tutorial!
+
+I recommend you use source control for this project. In fact, Gatsby will automatically create a repository when you start your project! If you aren't familiar with git, check out [this shorter rundown](https://guides.github.com/activities/hello-world/), [this detailed blog](https://towardsdatascience.com/getting-started-with-git-and-github-6fcd0f2d4ac6) or browse through [this spread of articles from Atlassian](https://www.atlassian.com/git/tutorials) for more in depth reading.
 
 # Setup Gatsby Site
-The site we will be developing is a blog. This fits the tech stack used, because often use a Content Management System (CMS) like Contentful to pull data from. We also want to have our site dynamically builed when we create new posts. We'll do all this in this tutorial!
+Let's start by creating the Gatsby project
 
 ## Install Gatsby CLI
 Gatsby comes with a slick CLI that helps you generate new applications. Before creating your first project, install gatsby-cli globally.
@@ -112,14 +123,24 @@ Go to `Content model` on the top nav. Then click this "Add Content Type" in the 
 
 ![create content model](https://res.cloudinary.com/meta-lark-design/image/upload/c_scale,w_0.5/v1570398343/mike-portfolio/gatsby-contentful-netlify/6-create-content-model.png)
 
-You'll notice a button to the side to "(+) Add Field". Fields act as data entries on your model and can be of a variety of types.
+You'll notice a button to the side to "(+) Add Field". Fields act as data entries on your model and can be of a variety of types. The fields associated with our blog that we'll be creating are:
+
+1. Title (short text)
+2. Body (long text)
+3. Image (media)
+4. Tags (short text, list) *
+5. Slug (short text, slug, unique, required) *
+
+Go ahead and try to make a few fields on your own. Images of configuring them are shown below. \*The last two fields have special settings so pay close attention to them.
+
+## Creating Model Fields
 
 - Click on **Add Field** start adding fields to your model.
 - Select **Text** for your first field.
 
 ![chose text field](https://res.cloudinary.com/meta-lark-design/image/upload/c_scale,w_0.5/v1570398343/mike-portfolio/gatsby-contentful-netlify/7-field-options.png)
 
--Put Title as its name, leave it as a short text and click create.
+- Put Title as its name, leave it as a short text and click create.
 
 ![create title field](https://res.cloudinary.com/meta-lark-design/image/upload/c_scale,w_0.5/v1570398343/mike-portfolio/gatsby-contentful-netlify/8-title-text.png)
 
@@ -128,11 +149,11 @@ You'll notice a button to the side to "(+) Add Field". Fields act as data entrie
 ![create body field](https://res.cloudinary.com/meta-lark-design/image/upload/c_scale,w_0.5/v1570398343/mike-portfolio/gatsby-contentful-netlify/9-create-body.png)
 
 - Create a **Media** field and label it as **Image**
-- Create another text field and name it tags. Make sure to check the list option on the right.
+- Create another text field and name it tags. \*Make sure to check the list option on the right.
 
 ![create tags field](https://res.cloudinary.com/meta-lark-design/image/upload/c_scale,w_0.5/v1570398343/mike-portfolio/gatsby-contentful-netlify/10-tags.png)
 
-- Create a final **Text** field for **Slug**. Instead of clicking create, click **Create and Configure** and do the following: - Go to **Appearance Tab** and select **Slug**. - Go to **Validations** and select **Required** and **Unique**. The slug field is the final part of the URL path that will lead to your post, so we want it to be unique (no two posts can have the same URL)
+- Create a final **Text** field for **Slug**. \*Instead of clicking create, click **Create and Configure** and do the following: - Go to **Appearance Tab** and select **Slug**. - Go to **Validations** and select **Required** and **Unique**. The slug field is the final part of the URL path that will lead to your post, so we want it to be unique (no two posts can have the same URL)
 
 ![click create and configure](https://res.cloudinary.com/meta-lark-design/image/upload/c_scale,w_0.5/v1570398343/mike-portfolio/gatsby-contentful-netlify/11-slug-field.png)
 
@@ -161,13 +182,13 @@ Create three new posts with placeholder data (or your own content if you have it
 
 We are going to use environment variables to store our API tokens. By placing the environment file in our `.gitignore` we'll keep our keys secret.
 
-For full details, see the [Gatsby Documentation on Environment Variables](https://www.gatsbyjs.org/docs/environment-variables/) in Gatsby.
+For full details on environment variables in Gatsby, see the [Gatsby Documentation on Environment Variables](https://www.gatsbyjs.org/docs/environment-variables/) in Gatsby.
 
 ## Create Environment File
 
-In the root directory of your project create a new file: `.env.development`
+In the root directory of your project create a new file `.env.development`. We don't want to commit this file to our repository, so go ahead and add this to your
 
-Before we forget, navigate to `.gitignore` and add the `.env.development` to the list. The new file you created should turn from green to grey if your text editor has git integration.
+ Before we forget, navigate to `.gitignore` and add the `.env.development` to the list. The new file you created should turn from green to grey if your text editor has git integration.
 
 Open `.env.development` and add the following fields with placeholders for now:
 
@@ -562,3 +583,5 @@ Create a new webhook. I'm calling mine `Contentful`. Then navigate to your Conte
 You'll notice on the right there are already pre-built options including one for Netlify. Click **Add** by Netlify and paste in the URL
 
 ![Netlify webhook](https://res.cloudinary.com/meta-lark-design/image/upload/c_scale,w_400/v1570398343/mike-portfolio/gatsby-contentful-netlify/26-netlify-webhooks.png)
+
+Note: This was inspired by this [ITNEXT Blog](https://itnext.io/content-management-with-gatsby-netlify-and-contentful-70f03de41602)
