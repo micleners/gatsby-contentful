@@ -92,6 +92,8 @@ siteMetadata: {
 }
 ```
 
+To see these changes, you will need to restart your server.
+
 # Commit 2:
 Update homepage, rename page-2 to blogposts, and update siteMetadata
 
@@ -114,6 +116,8 @@ You will probably be created a `contentful-starter` space. Go ahead and click th
 Notice the free tier limitations.
 
 ![create new space](https://res.cloudinary.com/meta-lark-design/image/upload/c_scale,w_0.5/v1570398343/mike-portfolio/gatsby-contentful-netlify/4_-free-tier.png)
+
+Create an empty space.
 
 ![create gatsby space](https://res.cloudinary.com/meta-lark-design/image/upload/c_scale,w_0.5/v1570398340/mike-portfolio/gatsby-contentful-netlify/5-create-gatsby-contful-space.png)
 
@@ -140,7 +144,7 @@ Go ahead and try to make a few fields on your own. Images of configuring them ar
 
 ![chose text field](https://res.cloudinary.com/meta-lark-design/image/upload/c_scale,w_0.5/v1570398343/mike-portfolio/gatsby-contentful-netlify/7-field-options.png)
 
-- Put Title as its name, leave it as a short text and click create.
+- Put Title as its name, leave it as a short text and click create (not create and configure).
 
 ![create title field](https://res.cloudinary.com/meta-lark-design/image/upload/c_scale,w_0.5/v1570398343/mike-portfolio/gatsby-contentful-netlify/8-title-text.png)
 
@@ -148,7 +152,7 @@ Go ahead and try to make a few fields on your own. Images of configuring them ar
 
 ![create body field](https://res.cloudinary.com/meta-lark-design/image/upload/c_scale,w_0.5/v1570398343/mike-portfolio/gatsby-contentful-netlify/9-create-body.png)
 
-- Create a **Media** field and label it as **Image**
+- Create a **Media** field and label it as **Image** **(*NOTICE: No image for this one, don't skip it* 😉)**
 - Create another text field and name it tags. \*Make sure to check the list option on the right.
 
 ![create tags field](https://res.cloudinary.com/meta-lark-design/image/upload/c_scale,w_0.5/v1570398343/mike-portfolio/gatsby-contentful-netlify/10-tags.png)
@@ -173,29 +177,24 @@ Save changes and then let's start creating content.
 
 On the top nav menu, go to **Content** and click the blue button **Add Blog Post** to start generating content.
 
-Create three new posts with placeholder data (or your own content if you have it). Feel free to use the following resources to help:
+**Create three new posts** with placeholder data (or your own content if you have it). Feel free to use the following resources to help:
 
 - [Hipster Ipsum](https://hipsum.co/) for filler content
-- [Upsplash](https://unsplash.com/) for open source photos
+- [Unsplash](https://unsplash.com/) for open source photos (FYI - horizontal images look better for this demo)
 
 # Storing API Keys
 
 We are going to use environment variables to store our API tokens. By placing the environment file in our `.gitignore` we'll keep our keys secret.
 
-For full details on environment variables in Gatsby, see the [Gatsby Documentation on Environment Variables](https://www.gatsbyjs.org/docs/environment-variables/) in Gatsby.
+For now, the instructions below should be good enough to get you going. For full details on environment variables in Gatsby, see the [Gatsby Documentation on Environment Variables](https://www.gatsbyjs.org/docs/environment-variables/) in Gatsby.
 
 ## Create Environment File
 
-In the root directory of your project create a new file `.env.development`. We don't want to commit this file to our repository, so go ahead and add this to your
+In the root directory of your project create a new file `.env.development`. We don't want to commit this file to our repository, so go ahead and add this to your `
 
  Before we forget, navigate to `.gitignore` and add the `.env.development` to the list. The new file you created should turn from green to grey if your text editor has git integration.
 
-Open `.env.development` and add the following fields with placeholders for now:
-
-```
-SPACE_ID=[your space id placeholder]
-API_KEY=[your API token placeholder]
-```
+Open `.env.development` and add the 
 
 Now let's go find the variables to put in the placeholders.
 
@@ -206,6 +205,14 @@ For Space ID, go to **Settings** in the top navigation, then down to **General S
 You will need to create an API key by going to the **Settings** top navigation and go down to **API keys**. Create a new API Key. Label it with your blog name and copy your **Content Delivery API** token to your **.env.development** file.
 
 ![API settings for API Key](https://res.cloudinary.com/meta-lark-design/image/upload/c_scale,w_0.5/v1570398343/mike-portfolio/gatsby-contentful-netlify/16-settings-api-keys.png)
+
+In the end your `.env.development` should look something like this:
+following fields with placeholders for now:
+
+```
+SPACE_ID=z98vmp193pdo
+API_KEY=8oud043998dfsd4SDf04fd8dfd08sdf083444
+```
 
 ## Install Contentful Plugin To Gatsby
 
@@ -242,6 +249,8 @@ module.exports = {
 Add environment variables, install contentful plugin and configure.
 
 # Query GraphQL
+
+Let's take a gander at what data is in your GraphQL layer. If we did things right we should have all our blog information in the GraphQL layer.
 
 Build your project and navigate to the second link. This will open up GraphiQL, an interface that lets you investigate and query the graph layer.
 
@@ -320,9 +329,9 @@ exports.createPages = ({ graphql, actions }) => {
 }
 ```
 
-Then we will need to create a `template` directory in our `src` folder named `blogpost.js`: `./src/templates/blogpost.js`
+Create a `template` directory in our `src` folder and add a file named `blogpost.js`.
 
-Update this file with the following content:
+You should now have the file `./src/templates/blogpost.js`. Update this file with the following content:
 
 ```javascript
 import React from "react"
@@ -513,9 +522,12 @@ footer {
 }
 ```
 
+Before committing, close down you server and start it again. See what has changed!
 # Commit 4:
 
 Load posts through node-api, create template, update blogposts.js and styling
+
+# Deploy To Netlify
 
 Push your code up to your Github page by creating a new github repo (don't create a readme). Copy the github URL and in your local terminal run the command:
 `git remote add origin [YOUR_REPO_URL_HERE]`
@@ -523,10 +535,7 @@ Push your code up to your Github page by creating a new github repo (don't creat
 Then push with:
 `git push origin master`
 
-# Deploy To Netlify
-
-If you don't have a profile on Netlify, create one now.
-
+If you don't have a profile on Netlify, create one now. Then create the site
 - On your main page, click the green **New site from Git** button on the top right.
 - Under continuous deployment, click **Github**
 - During the setup, you can choose to either allow all sites to be deployed, or just some. If you choose only some, make sure you add the repo you pushed `gatsby-contentful` to your deploy list
@@ -534,7 +543,7 @@ If you don't have a profile on Netlify, create one now.
 
 ![gatsby deploy settings on netlify](https://res.cloudinary.com/meta-lark-design/image/upload/c_scale,w_600/v1570398343/mike-portfolio/gatsby-contentful-netlify/17-gatsby-deploy-settings.png)
 
-## Environment Varialbes
+## Environment Variables
 
 Oh, no! You'll notice that your deploy failed. Let's see why be clicking the `Site deploy failed` status and navigate to the deploy that failed.
 
@@ -570,6 +579,13 @@ Scroll up to the top navigation menu item named `Deploys`. Then in the middle wh
 
 ![redeploy-site](https://res.cloudinary.com/meta-lark-design/image/upload/c_scale,w_700/v1570398343/mike-portfolio/gatsby-contentful-netlify/23-redeploy-site.png)
 
+## Checkout Site
+Congratulations, you site should have successfully deployed! Go ahead and visit the URL it provides you to check it out. Then go to the general settings and change the site name to something a bit more on point than the randomly generated one.
+
+![Change site name or domain](https://res.cloudinary.com/meta-lark-design/image/upload/c_scale,w_700/v1570398343/mike-portfolio/gatsby-contentful-netlify/27-domain-management.png)
+
+You'll also notice the `Domain management` option. Feel free to hook up your custom domain to your Netlify site. This means `my-custom-url.com` --> `my-custom-url.netlify.com` so that users will navigate to your URL, instead of netlify. For example, the presentation for this blog connects `gatsby-intro.micleners.com` to `gallant-shaw-8bc321.netlify.com`.
+
 # Create Contentful Hook
 
 We can create a hook to trigger our website to build every time we publish new data. In the `Deploy settings` again (under `Build & deploy`) find the section labeled `Build hooks`
@@ -584,4 +600,7 @@ You'll notice on the right there are already pre-built options including one for
 
 ![Netlify webhook](https://res.cloudinary.com/meta-lark-design/image/upload/c_scale,w_400/v1570398343/mike-portfolio/gatsby-contentful-netlify/26-netlify-webhooks.png)
 
-Note: This was inspired by this [ITNEXT Blog](https://itnext.io/content-management-with-gatsby-netlify-and-contentful-70f03de41602)
+#Congratulations 🎉
+You have created, built and deployed your gatsby site to the internet :) Feel free to explore the features of Netlify, customize your site, or continue generating content!
+
+Credit: This was inspired by this [ITNEXT Blog](https://itnext.io/content-management-with-gatsby-netlify-and-contentful-70f03de41602)
