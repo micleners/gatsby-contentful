@@ -580,7 +580,7 @@ Scroll up to the top navigation menu item named `Deploys`. Then in the middle wh
 ![redeploy-site](https://res.cloudinary.com/meta-lark-design/image/upload/c_scale,w_700/v1570398343/mike-portfolio/gatsby-contentful-netlify/23-redeploy-site.png)
 
 ## Checkout Site
-Congratulations, you site should have successfully deployed! Go ahead and visit the URL it provides you to check it out. Then go to the general settings and change the site name to something a bit more on point than the randomly generated one.
+Congratulations, your site should have successfully deployed! Go ahead and visit the URL it provides you to check it out. Then go to the general settings and change the site name to something a bit more on point than the randomly generated one.
 
 ![Change site name or domain](https://res.cloudinary.com/meta-lark-design/image/upload/c_scale,w_700/v1570398343/mike-portfolio/gatsby-contentful-netlify/27-domain-management.png)
 
