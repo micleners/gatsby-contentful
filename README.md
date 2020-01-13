@@ -11,7 +11,7 @@ We will be developing a blog in this tutorial. It's perfect for this tech stack,
 
 # Before We Get Started
 
-### Install VS Code (recommended)
+## Install VS Code (recommended)
 You can use any text editor to write code for this tutorial, but I recommend you use Visual Studio Code. [Download here](https://code.visualstudio.com/download)
 
 ## Download NodeJS
