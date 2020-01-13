@@ -1,4 +1,4 @@
-# Gatsby + Contentful + Netlify
+# Gatsby + Contentful + Netlify Blog Tutorial
 Gatsby is a static site generator built on top of React. A static site has all the data you need when the user requests it, so the site loads blazing fast. Gatsby does this by fetching all the data you hook up to it at build time. It can also still behave like a react app, too, so you get the best of both worlds!
 
 The headless CMS (that is - a content management system without a frontend) that we will be using is Contentful. Gatsby has many plugins to use other CMS platforms like SanityIO, Netlify CMS, or even WordPress API.
@@ -9,7 +9,33 @@ To read more about this tech stack, check out the tutorial [introduction present
 
 We will be developing a blog in this tutorial. It's perfect for this tech stack, because often we use a Content Management System (CMS) like Contentful to pull data from. We also want to have our site dynamically re-built when we create new posts. We'll do all this in this tutorial!
 
-I recommend you use source control for this project. In fact, Gatsby will automatically create a repository when you start your project! If you aren't familiar with git, check out [this shorter rundown](https://guides.github.com/activities/hello-world/), [this detailed blog](https://towardsdatascience.com/getting-started-with-git-and-github-6fcd0f2d4ac6) or browse through [this spread of articles from Atlassian](https://www.atlassian.com/git/tutorials) for more in depth reading.
+# Before We Get Started
+
+### Install VS Code (recommended)
+You can use any text editor to write code for this tutorial, but I recommend you use Visual Studio Code. [Download here](https://code.visualstudio.com/download)
+
+## Download NodeJS
+NodeJS lets us run JavaScript on our computer. It also comes with `npm` which is required to install Gatsby. If you don't have NodeJS, [download it here](https://nodejs.org/en/)
+
+## Set Up Source Control
+You will need to use source control (git) to complete this project. VS Code comes with git integrated, so that's a good option to go with. Gatsby will also initiated a repository for you. You can certainly wait until it sets that up for you.
+
+If you want to know more about git, check out [this shorter rundown](https://guides.github.com/activities/hello-world/), [this detailed blog](https://towardsdatascience.com/getting-started-with-git-and-github-6fcd0f2d4ac6) or browse through [this spread of articles from Atlassian](https://www.atlassian.com/git/tutorials) for more in depth reading.
+
+## Helpful Notes
+Let's cover some terminology before we dive in.
+
+### Command Line vs Text Editor
+You will be doing most of your code in one of two places: the command line and your text editor.
+
+While there is nuanced differences, the command line is also known as the terminal, console and shell. Examples of commands you'll have to use in the terminal are `cd` (change directory), `git push` (push your git repo), `npm install` (install something with node package manager), etc.
+
+The text editor has a variety of options. Common ones are standalone applications like VS Code, Atom, Sublime, Web Storm, etc. Common shell integrated text editors are Vim, Emacs, and Nano. If I say to "edit a file" or "add the following code to the file", this means open the file in your editor of choice to change it.
+
+### Starting and Stopping Your Application Server
+You'll be running the Gatsby server locally with the command `gatsby develop`. To exit the server, whether you are on a Mac or PC, use the shortcut `ctrl+c`. You'll need to be hopping back and forth between the development server and the command line, so remember this key binding.
+
+VS Code also allows for multiple command line windows. To access the command line in VS Code you can go to `View` --> `Terminal` or use the shortcut <code>ctrl-`</code>. From there, you can split terminals or create new ones with the buttons on the top right of the terminal.
 
 # Setup Gatsby Site
 Let's start by creating the Gatsby project
@@ -20,7 +46,7 @@ Gatsby comes with a slick CLI that helps you generate new applications. Before c
 `npm i -g gatsby-cli`
 
 ## Create new site
-Gatsby is a static site generator that it built on top of react. At build time, Gatsby reaches out to all your data sources (markdown files, json, yaml, WordPress, Contentful, etc) and puts it in the graphQL data layer. Creating a new project will set you up with the basic stack you'll need to get started. 
+Gatsby is a static site generator that it built on top of react. At build time, Gatsby reaches out to all your data sources (markdown files, json, yaml, WordPress, Contentful, etc) and puts it in the graphQL data layer. Creating a new project will set you up with the basic stack you'll need to get started.
 
 `gatsby new gatsby-contentful`
 
@@ -74,7 +100,7 @@ export default IndexPage
 ```
 
 ## Add index.css
-Create a file in the `pages` directory named `index.css`. You probably noticed we imported that in `index.js`. 
+Create a file in the `pages` directory named `index.css`. You probably noticed we imported that in `index.js`.
 
 This tutorial is focused on loading data from our CMS through Gatsby and not design. I'll provide a style sheet for you later in this tutorial but will not go into depth on what it does.
 
@@ -82,7 +108,7 @@ This tutorial is focused on loading data from our CMS through Gatsby and not des
 Change the name of `page-2.js` to `blogposts.js`. This is where we'll list all of the blogs from Contetnful after we hook it up with a Gatsby plugin.
 
 ## Update Site Meta Data
-Navigate to the file `gatsby-config.js` and update `siteMetadata` with your own information. The title is what appears at the top of the browser window/tab. The description and author can be queried and used as data in components.  All three values are used in the baked in SEO component. 
+Navigate to the file `gatsby-config.js` and update `siteMetadata` with your own information. The title is what appears at the top of the browser window/tab. The description and author can be queried and used as data in components.  All three values are used in the baked in SEO component.
 
 ```js
 siteMetadata: {
@@ -194,7 +220,7 @@ In the root directory of your project create a new file `.env.development`. We d
 
  Before we forget, navigate to `.gitignore` and add the `.env.development` to the list. The new file you created should turn from green to grey if your text editor has git integration.
 
-Open `.env.development` and add the 
+Open `.env.development` and add the
 
 Now let's go find the variables to put in the placeholders.
 
